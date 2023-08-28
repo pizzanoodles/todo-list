@@ -1,4 +1,3 @@
-import { useState } from "react";
 import TodoItem from "./TodoItem";
 const TodoGroup = (todoList) => {
     return (
