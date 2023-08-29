@@ -31,10 +31,12 @@ const TodoGroup = () => {
         <div>
             <h1>To-Do List:</h1>
             <table className="todoTable">
-                {selector.map((todoItem, index) => <tr key={index} className="todoItem">
-                    <td className={todoItem.done ? "tdDoneTodo" : "tdNotDoneTodo"} onClick={() => onToggleHandler(index)}><TodoItem todoItem={todoItem} /></td>
-                    <td className="tdDeleteBtn"><button className="deleteBtn" onClick={() => confirmDelete(index)}>X</button></td>
-                </tr>)}
+                <tbody>
+                    {selector.map((todoItem, index) => <tr key={index} className="todoItem">
+                        <td className={todoItem.done ? "tdDoneTodo" : "tdNotDoneTodo"} onClick={() => onToggleHandler(index)}><TodoItem todoItem={todoItem} /></td>
+                        <td className="tdDeleteBtn"><button className="deleteBtn" onClick={() => confirmDelete(index)}>X</button></td>
+                    </tr>)}
+                </tbody>
             </table>
         </div>
     )
