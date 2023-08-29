@@ -78,9 +78,41 @@ tr:nth-child(even) {
   padding:8px;
   background-color: #f6ff00;
   border-radius: 7px;
+  cursor:pointer;
   
 }
 .btnAdd:hover {
   transition-duration: 0.3s;
   background-color: gold;
+}
+
+.tdDoneTodo {
+  transition-duration: 0.5s;
+  cursor:pointer;
+  text-decoration:line-through;
+  width:90%;
+}
+.tdNotDoneTodo {
+  transition-duration: 0.5s;
+  cursor:pointer;
+  width:90%;
+}
+.tdDoneTodo:hover, .tdNotDoneTodo:hover {
+  transition-duration: 0.5s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.tdDeleteBtn {
+  width:10%;
+}
+.deleteBtn {
+  color:white;
+  transition-duration: 0.3s;
+  background-color: red;
+  border-radius: 7px;
+  padding: 8px;
+  cursor:pointer;
+}
+.deleteBtn:hover {
+  transition-duration: 0.3s;
+  background-color: darkred;
 }
