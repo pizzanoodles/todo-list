@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "./TodoSlice";
-const TodoGenerator = ({ todoList, setTodoList }) => {
+const TodoGenerator = () => {
     const [userInput, setUserInput] = useState("");
     const dispatch = useDispatch();
     const onAddHandler = () => {
