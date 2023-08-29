@@ -2,10 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 const todoSlice = createSlice({
     name: "todos",
     initialState: {
-        todoList: []
+        todoList: [],
+        latestId: 0
     },
     reducers: {
         addTodo: (state, action) => {
+            state.latestId++;
+            action.payload.id = state.latestId;
             state.todoList.push(action.payload);
         },
         deleteTodo: (state, action) => {
