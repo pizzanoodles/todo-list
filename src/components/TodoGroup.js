@@ -15,8 +15,8 @@ const TodoGroup = () => {
             <h1>To-Do List:</h1>
             <table className="todoTable">
                 {selector.map((todoItem, index) => <tr key={index} className="todoItem">
-                    <td className={todoItem.done ? "done" : ""} onClick={() => onToggleHandler(index)}><TodoItem todoItem={todoItem} />
-                        <button onClick={() => onDeleteHandler(index)}>X</button></td>
+                    <td className={todoItem.done ? "done" : ""} onClick={() => onToggleHandler(index)}><TodoItem todoItem={todoItem} /></td>
+                    <td><button className="deleteBtn" onClick={() => onDeleteHandler(index)}>X</button></td>
                 </tr>)}
             </table>
         </div>
