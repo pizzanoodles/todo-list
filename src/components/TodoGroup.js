@@ -1,9 +1,11 @@
 import TodoItem from "./TodoItem";
-const TodoGroup = (todoList) => {
+const TodoGroup = ({todoList}) => {
     return (
         <div>
             <h1>To-Do List:</h1>
-            <TodoItem todoList={todoList} />
+            <table className="todoTable">
+                {todoList.map((todoItem) => <tr className="todoItem"><td><TodoItem todoItem={todoItem} /></td></tr>)}
+            </table>
         </div>
     )
 }

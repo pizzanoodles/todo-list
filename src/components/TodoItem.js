@@ -1,9 +1,8 @@
-const Todo = (todoList) => {
+const Todo = ({todoItem}) => {
     return (
-        <table className="todoTable">
-            {todoList.todoList.todoList.map((todoItem) => <tr className="todoItem"><td>{todoItem}</td></tr>)}
-        </table>
-
+        <div>
+            {todoItem.text}
+        </div>
     )
 }
 export default Todo;
