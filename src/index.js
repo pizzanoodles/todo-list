@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import HelpPage from './pages/HelpPage';
-import TodoList from './components/TodoList';
-import DoneList from './components/DoneList';
-import TodoItemDetail from "./pages/TodoItemDetail";
 import { Provider } from "react-redux";
-import { store } from './store/store';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import reportWebVitals from './reportWebVitals';
+import App from './App';
+import DoneList from './components/DoneList';
+import TodoList from './components/TodoList';
+import './index.css';
 import ErrorPage from './pages/ErrorPage';
+import HelpPage from './pages/HelpPage';
+import TodoItemDetail from "./pages/TodoItemDetail";
+import reportWebVitals from './reportWebVitals';
+import { store } from './store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([{
