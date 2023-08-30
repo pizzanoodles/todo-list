@@ -1,0 +1,78 @@
+.todoGroup {
+    margin:auto;
+    width:90%;
+}
+.todoTable {
+    margin: auto;
+    width:75%;
+}
+
+.ant-table-cell {
+    background-color: #726e1cb6 !important;
+    font-family:'Roboto Slab';
+    font-size: 20px;
+}
+.ant-table-cell:hover {
+    background-color: #726e1c50 !important;
+}
+.ant-table-thead .ant-table-cell{
+    background-color: #3d3a54 !important;
+    color:white !important;
+}
+.editBtn {
+    background-color: 	#222222;
+}
+.editBtn:hover {
+    background-color:#328336 !important ;
+}
+.tdDoneTodo {
+    text-decoration: line-through;
+}
+.tdDoneTodo:hover, .tdNotDoneTodo:hover {
+    cursor: pointer;
+}
+.ant-modal-content {
+    border: 2px solid #328336 !important;
+    box-shadow: 0px 0px 3px 3px #64cc4f !important;
+    background-color: #222222 !important;
+    color: white !important;
+}
+.ant-modal-title {
+    color: white !important;
+    background-color: #222222 !important;
+}
+.ant-form-item-required {
+    color: white !important;
+    background-color: #222222 !important;
+}
+#form_newTask {
+    color: white !important;
+    background-color: #222222 !important;
+}
+#form_newTask:hover {
+    background-color: #333333 !important;
+    border: 1px solid #64cc4f;
+}
+::placeholder {
+    color: white !important;
+    opacity: 0.25;
+}
+.ant-btn.css-dev-only-do-not-override-190m0jy.ant-btn-primary.submitBtn {
+    background-color: #64cc4f !important;
+    color:black !important;
+}
+.ant-btn.css-dev-only-do-not-override-190m0jy.ant-btn-primary.submitBtn:hover{
+    background-color: #328336 !important;
+    color:white !important;
+}
+.ant-btn.css-dev-only-do-not-override-190m0jy.ant-btn-default.cancelBtn:hover {
+    background-color: rgb(177, 44, 44);
+    color:white;
+    border-color: rgb(136, 0, 0);
+}
+.todoListHeader {
+    color: #3d3a54;
+    text-align: center;
+    font-family: "Roboto Slab";
+    font-size:28px;
+}

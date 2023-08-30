@@ -1,0 +1,10 @@
+.todoItemDetail {
+    padding: 1px;
+    font-family: "Roboto Slab";
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 8%;
+    background-color: rgba(105, 215, 210, 0.5);
+    box-shadow: 0px 0px 5px 5px #a2e6e3;
+}

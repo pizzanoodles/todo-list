@@ -1,0 +1,20 @@
+.app-whole {
+    background-color:#fc7753;
+    height:100%;
+}
+.nav-bar {
+   background-color:#b6a68a;
+}
+li {
+    color: black;
+}
+li:hover {
+    color:#d22f03 !important;
+}
+.ant-menu-item-selected {
+    background-color:#423828 !important;
+}
+.ant-menu-item-selected:hover {
+    color:white !important;
+    cursor:not-allowed;
+}

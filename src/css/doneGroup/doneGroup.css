@@ -1,0 +1,21 @@
+.doneGroup {
+    width:50%;
+    margin: auto;
+    text-align: center;;
+}
+li.ant-list-item {
+    text-align: center;
+    cursor: pointer;
+    font-family: "Roboto Slab";
+    font-size: 22px;
+    transition-duration: 0.5s;
+}
+li.ant-list-item:hover {
+    color: #248d87 !important;
+}
+.doneItemsHeader {
+    color: #3d3a54;
+    text-align: center;
+    font-family: "Roboto Slab";
+    font-size:28px;
+}
