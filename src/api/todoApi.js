@@ -13,3 +13,6 @@ export const createTodoTask = (todoTask) => {
 export const deleteTodoTask = (id) => {
     return api.delete(`/todos/${id}`);
 }
+export const updateTodoText = (id, todoTask) => {
+    return api.put(`/todos/${id}`, todoTask);
+}
