@@ -3,6 +3,9 @@
     margin: auto;
     text-align: center;;
 }
+.ant-list.ant-list-lg.ant-list-split.ant-list-bordered.ant-list-something-after-last-item.css-dev-only-do-not-override-190m0jy {
+    background-color: #248d87;
+}
 li.ant-list-item {
     text-align: center;
     cursor: pointer;
@@ -11,7 +14,9 @@ li.ant-list-item {
     transition-duration: 0.5s;
 }
 li.ant-list-item:hover {
-    color: #248d87 !important;
+    color: #fb5022 !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
 }
 .doneItemsHeader {
     color: #3d3a54;
