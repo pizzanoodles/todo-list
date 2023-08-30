@@ -1,11 +1,12 @@
 import TodoItem from "./TodoItem";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteTodo, toggleDone } from "./TodoSlice";
+import { deleteTodo, resetTodoTask } from "./TodoSlice";
 import { confirmAlert } from "react-confirm-alert";
+import * as todoApi from "../api/todoApi";
 import "react-confirm-alert/src/react-confirm-alert.css";
-const TodoGroup = () => {
+const TodoGroup = (props) => {
     const dispatch = useDispatch();
-    const selector = useSelector((state) => state.todo.todoList);
+    const tasks = useSelector((state) => state.todo.todoList);
     const confirmDelete = (index) => {
         confirmAlert({
             title: "Confirm delete of task",
@@ -21,19 +22,25 @@ const TodoGroup = () => {
             ]
         })
     }
-    const onDeleteHandler = (index) => {
-        dispatch(deleteTodo(index))
+    const onDeleteHandler = async(index) => {
+        await todoApi.deleteTodoTask(tasks[index].id);
+        const response = await todoApi.getTodoTasks();
+        dispatch(resetTodoTask(response.data));
+        // dispatch(deleteTodo(index))
     }
-    const onToggleHandler = (index) => {
-        dispatch(toggleDone(index))
+    const onToggleHandler = async(index) => {
+        await todoApi.updateTodoTask(tasks[index].id, {done: !tasks[index].done});
+        const response = await todoApi.getTodoTasks();
+        dispatch(resetTodoTask(response.data));
+        // dispatch(toggleDone(index))
     }
     return (
         <div>
             <h1>To-Do List:</h1>
             <table className="todoTable">
                 <tbody>
-                    {selector.map((todoItem, index) => <tr key={index} className="todoItem">
-                        <td className={todoItem.done ? "tdDoneTodo" : "tdNotDoneTodo"} onClick={() => onToggleHandler(index)}><TodoItem todoItem={todoItem} /></td>
+                    {tasks.map((task, index) => <tr key={index} className="todoItem">
+                        <td className={task.done ? "tdDoneTodo" : "tdNotDoneTodo"} onClick={() => onToggleHandler(index)}><TodoItem todoItem={task} index={index}/></td>
                         <td className="tdDeleteBtn"><button className="deleteBtn" onClick={() => confirmDelete(index)}>X</button></td>
                     </tr>)}
                 </tbody>

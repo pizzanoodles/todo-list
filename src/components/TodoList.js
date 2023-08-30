@@ -1,10 +1,16 @@
-import TodoGroup from "./TodoGroup";
+import { useEffect } from "react";
+import { useTodos } from "../hooks/useTodos";
 import TodoGenerator from "./TodoGenerator";
-const TodoList = () => {
+import TodoGroup from "./TodoGroup";
+const TodoList = (props) => {
+    const loadTodos = useTodos();
+    useEffect(() => {
+        loadTodos();
+    }, []);
     return (
         <div className="todoList">
             <div className="todoGroup">
-                <TodoGroup />
+                <TodoGroup isDone={props.isDone} />
             </div>
             <div className="todoGenerator">
                 <TodoGenerator />
